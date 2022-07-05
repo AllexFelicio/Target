@@ -1,0 +1,37 @@
+4) Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
+
+SP – R$67.836,43
+RJ – R$36.678,66
+MG – R$29.229,88
+ES – R$27.165,48
+Outros – R$19.849,53
+
+Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.
+
+#include <stdio.h>
+#include <locale.h>
+
+main() {
+
+float sp = 67.83643;
+float rj = 36.67866;
+float mg = 29.22988;
+float es = 27.16548;
+float outros = 19.84953;
+
+float total =(sp + rj + mg + es + outros);
+printf("Valor total: %.2f \n",total);
+
+float persp = ((sp/total)*100);
+float perrj = ((rj/total)*100);
+float permg = ((mg/total)*100);
+float peres = ((es/total)*100);
+float peroutros = ((outros/total)*100);
+
+printf("Porcentagem de SP: %.2f%% \n",persp);
+printf("Porcentagem de RJ: %.2f%% \n",perrj);
+printf("Porcentagem de MG: %.2f%% \n",permg);
+printf("Porcentagem de ES: %.2f%% \n",peres);
+printf("Porcentagem de OUT: %.2f%% \n",peroutros);
+    
+}
